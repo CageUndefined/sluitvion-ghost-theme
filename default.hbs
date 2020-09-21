@@ -28,8 +28,9 @@
     {{!-- <link href="https://cdn.bootcss.com/bulma/0.7.5/css/bulma.min.css" rel="stylesheet"> --}}
 
     {{!-- KaTeX: css --}}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css"
+        integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+
     {{!-- Prismjs: css--}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
@@ -53,17 +54,17 @@
         let ghostSearch = new GhostSearch({
             key: search_key, // set var search_key in Site Header
             host: search_url, // set var search_url in Site Header
-            input:   '#search-input',
+            input: '#search-input',
             results: '#search-results',
             options: {
                 limit: 10
             },
-            template: function(result) {
+            template: function (result) {
                 let url = [location.protocol, '//', location.host].join('');
-                return '<a class="navbar-item" href="' + url + '/' + result.slug + '/">' + result.title + '</a>';  
+                return '<a class="navbar-item" href="' + url + '/' + result.slug + '/">' + result.title + '</a>';
             },
             on: {
-                afterDisplay: function(results){
+                afterDisplay: function (results) {
                     if (results.total == 0 && document.getElementById('search-input').value != '') {
                         let resultsElement = document.getElementById('search-results');
                         let e = document.createElement('p');
@@ -83,33 +84,32 @@
 
     {{!-- jquery: for carousel + prismjs --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+
     {{!-- import js --}}
     <script src="{{asset 'js/main.js'}}"></script>
-    
+
     {{!-- carousel: js --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
             $('#carousel-home').slick({
                 autoplay: true,
                 infinite: true,
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                arrows:false,
+                arrows: false,
                 dots: false,
                 centerMode: false,
                 focusOnSelect: false
             });
         });      
     </script>
-    
+
     {{!-- switches: showcase & support_fizzy --}}
     <script>
-        if (typeof show_showcase == 'undefined') {var show_showcase = false;};
-        if (show_showcase){$('#showcase').removeClass("is-hidden");};
-        if (typeof fizzy_credit == 'undefined') {var fizzy_credit = true;};
-        if (fizzy_credit){$('#fizzy-credit').removeClass("is-hidden");};
+        if (typeof show_showcase == 'undefined') { var show_showcase = false; };
+        if (show_showcase) { $('#showcase').removeClass("is-hidden"); };
     </script>
 </body>
+
 </html>

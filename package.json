@@ -1,39 +1,40 @@
 {
-    "name": "fizzy",
-    "description": "A tasty blogging theme for Ghost.",
-    "version": "1.3.2",
-    "author": {
-        "name": "Yuzhang Huang",
-        "email": "huangyuzhang@live.cn"
-    },
-    "engines": {
-        "ghost": ">=3.0.0",
-        "ghost-api": "v3"
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme"
-    ],
-    "dependencies": {},
-    "config": {
-        "posts_per_page": 8,
-        "image_sizes": {
-            "icon": {
-                "width": 64
-            },
-            "small": {
-                "width": 300
-            },
-            "medium": {
-                "width": 600
-            },
-            "large": {
-                "width": 900
-            },
-            "wide": {
-                "width": 1200
-            }
-        }
+  "name": "cu-sluitvion",
+  "description": "Ghost Theme for the Sluit Vion website",
+  "version": "1.3.2",
+  "author": {
+    "name": "Cage Undefined",
+    "email": "hello@cageundefined.org",
+    "url": "https://cageundefined.org"
+  },
+  "engines": {
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
+  },
+  "keywords": [
+    "ghost",
+    "theme",
+    "ghost-theme"
+  ],
+  "dependencies": {},
+  "config": {
+    "posts_per_page": 8,
+    "image_sizes": {
+      "icon": {
+        "width": 64
+      },
+      "small": {
+        "width": 300
+      },
+      "medium": {
+        "width": 600
+      },
+      "large": {
+        "width": 900
+      },
+      "wide": {
+        "width": 1200
+      }
     }
+  }
 }

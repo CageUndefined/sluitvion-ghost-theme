@@ -4,9 +4,11 @@
         {{!-- featured_image --}}
         <a class="is-paddingless-top" href="{{url}}" alt="{{title}}" title="{{title}}">
             {{#if feature_image}}
-                <div class="featured-image" style="background-image:url({{img_url feature_image size="medium"}});"></div>    
+            <div class="featured-image" style="background-image:url({{img_url feature_image size="medium"}});"></div>
             {{else}}
-                <div class="featured-image" style="text-align: center;line-height:190px;background-image: linear-gradient(to bottom right, #6c1f9c, #0e5680);"> <span class="is-montserrat is-size-3 has-text-white">NO IMAGE</span></div>    
+            <div class="featured-image"
+                style="text-align: center;line-height:190px;background-image: linear-gradient(to bottom right, #6c1f9c, #0e5680);">
+                <span class="is-montserrat is-size-3 has-text-white">NO IMAGE</span></div>
             {{/if}}
         </a>
 
@@ -14,11 +16,13 @@
         <div class="content">
             <div class="post-info">
                 {{#if featured}}
-                    {{#if feature_image}}
-                    <span class="featured-label has-img is-montserrat" title="{{t "Featured"}}"><i class="iconfont icon-star"></i> <span>{{t "Featured"}}</span></span>
-                    {{else}}
-                    <span class="featured-label no-img is-montserrat" title="{{t "Featured"}}"><i class="iconfont icon-star"></i> <span>{{t "Featured"}}</span></span>
-                    {{/if}}
+                {{#if feature_image}}
+                <span class="featured-label has-img is-montserrat" title="{{t "Featured"}}"><i
+                        class="iconfont icon-star"></i> <span>{{t "Featured"}}</span></span>
+                {{else}}
+                <span class="featured-label no-img is-montserrat" title="{{t "Featured"}}"><i
+                        class="iconfont icon-star"></i> <span>{{t "Featured"}}</span></span>
+                {{/if}}
                 {{/if}}
                 <div class="level is-mobile is-montserrat is-uppercase is-margin-bottom-1">
                     <div class="level-left">
@@ -43,37 +47,14 @@
                     </a>
                     <p class="is-hidden is-hidden-mobile is-margin-bottom-1">
                         {{#if meta_description}}
-                            {{excerpt words="20"}}
+                        {{excerpt words="20"}}
                         {{else}}
-                            {{excerpt words="20"}}
+                        {{excerpt words="20"}}
                         {{/if}}
                     </p>
                 </div>
 
-                {{!-- author--}}
-                <div class="media is-hidden-mobile">
-                    <div class="media-left">
-                        <div class="columns is-vcentered is-1">
-                            <div class="column is-narrow">
-                                {{#primary_author}}
-                                    {{#if profile_image}} 
-                                    <a href="{{url}}">
-                                        <figure class="image is-32x32 is-marginless">
-                                        <img class="image-squared is-rounded" src="{{img_url profile_image size="icon"}}" alt="{{name}}" title="{{name}}">
-                                        </figure>
-                                    </a>
-                                    {{/if}}
-                                {{/primary_author}}
-                            </div>
-                            <div class="column is-narrow is-size-7-touch has-text-weight-bold" style="padding-left:0px;">
-                                {{#primary_author}}  
-                                    <a href="{{url}}" class="has-text-grey-dark">{{name}}</a>
-                                {{/primary_author}}
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-            </div>  
+            </div>
         </div>
     </div>
 </article>
