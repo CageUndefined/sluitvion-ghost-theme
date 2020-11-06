@@ -1,6 +1,11 @@
 {{!< default}}
 
 {{#post}}
+{{#has tag="#en"}}
+{{> langcontent-en}}
+{{else}}
+{{> langcontent}}
+{{/has}}
 <section class="section is-mobile-paddingless">
     <div class="columns">
         <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
@@ -11,10 +16,11 @@
                     {{!-- featured_image --}}
                     {{#if feature_image}}
                     <section class="featured-image">
-                        <div class="featured-image" style="background-image:url({{img_url feature_image size="wide"}});"></div>
+                        <div class="featured-image"
+                            style="background-image:url({{img_url feature_image size="wide"}});"></div>
                     </section>
                     {{/if}}
-                    
+
                     <section class="post-wrap is-vpadding-15">
                         <div class="spacing-15 is-hidden-mobile"></div>
                         {{!-- title --}}
@@ -27,7 +33,8 @@
                                 {{#has tag="count:1"}}<i class="iconfont icon-tag"></i>{{/has}}
                                 {{#has tag="count:>1"}}<i class="iconfont icon-tags"></i>{{/has}}</span>
                             {{#foreach tags}}
-                            <a href="{{url}}" class="button is-light is-size-7-mobile has-text-weight-semibold">{{name}}</a>
+                            <a href="{{url}}"
+                                class="button is-light is-size-7-mobile has-text-weight-semibold">{{name}}</a>
                             {{/foreach}}
                         </div>
                         {{/tag}}
@@ -43,5 +50,3 @@
     </div>
 </section>
 {{/post}}
-
-

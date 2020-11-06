@@ -1,6 +1,12 @@
 {{!< default}}
 
 {{#post}}
+{{#has tag="#en"}}
+{{> langcontent-en}}
+{{else}}
+{{> langcontent}}
+{{/has}}
+
 <section class="section is-mobile-paddingless">
     <div class="columns">
         <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>

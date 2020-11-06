@@ -78,12 +78,12 @@ pre[class*="language-"].line-numbers {
 }
 
 /* navbar */
-.navbar-start .navbar-item,
-.navbar-item img {
+.navbar-start .navbar-item
+{
   margin-right: 0.25rem;
 }
 @media screen and (min-width: 1024px) {
-  .navbar-item img {
+  .logo img {
     max-height: 4rem !important;
     margin-top: -1.5rem;
     margin-bottom: -1.5rem;

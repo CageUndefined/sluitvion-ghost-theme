@@ -1,0 +1,17 @@
+{{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
+
+{{#contentFor "navigation"}}
+{{navigation}}
+{{/contentFor}}
+
+{{#contentFor "description"}}
+{{@site.description}}
+{{/contentFor}}
+
+{{#contentFor "siteurl"}}
+{{@site.url}}
+{{/contentFor}}
+
+{{#contentFor "langswitcher"}}
+{{#link href="/en/"}}<img class="lang-switcher" src="{{asset 'images/flag-en.png'}}" />{{/link}}
+{{/contentFor}}

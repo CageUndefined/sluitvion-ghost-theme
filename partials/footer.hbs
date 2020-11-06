@@ -3,14 +3,7 @@
         <p class="copyright">&copy; {{date format="YYYY"}} <a href="{{@site.url}}"><strong
                     class="has-text-grey-darker">{{@site.title}}</strong></a></p>
         <p class="declare has-text-grey">
-            <script>
-                if (typeof footer_text == 'undefined') {
-                    var footer_text = "{{@site.description}}";
-                };
-            </script>
-            <script>
-                document.write(footer_text);
-            </script>
+            {{{block "description"}}}
             <br>Created and maintained with <span class="heart">❤</span> by <a href="https://cageundefined.org"
                 target="_blank" rel="noopener noreferrer"><strong>Cage Undefined</strong></a>.
         </p>

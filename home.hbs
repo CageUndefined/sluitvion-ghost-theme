@@ -4,11 +4,12 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
+{{> langcontent}}
+
 {{!-- showcase --}}
 {{> showcase}}
 
 {{!-- main --}}
-{{#get "posts" include="tags" limit=@config.posts_per_page order="published_at desc"}}
 <main class="section">
     <div class="columns">
         <div class="column is-hidden-touch is-1-desktop is-1-widescreen is-2-fullhd"></div>
@@ -28,4 +29,3 @@ into the {body} of the default.hbs template --}}
         {{pagination}}
     </div>
 </section>
-{{/get}}
