@@ -1,26 +1,32 @@
-{{#contentFor "lang"}}{{de}}{{/contentFor}}
-
-{{#contentFor "langfilter"}}tag:hash-de{{/contentFor}}
-
+{{#contentFor "lang"}}
+  {{de}}
+{{/contentFor}}
+{{#contentFor "langfilter"}}
+  tag:hash-de
+{{/contentFor}}
 {{#contentFor "navigation"}}
-<a class="navbar-item{{#has slug=../de}} nav-current{{/has}}" href="{{@site.url}}/de/">Home</a>
-{{#get "pages" filter="page:true+featured:true+tag:hash-de" limit="all" order="published_at asc"}}
-{{#foreach pages}}
-  {{#link class="navbar-item" href=url activeClass="nav-current"}}
-  {{title}}
+  {{#link class="navbar-item" href="/de/" activeClass="nav-current"}}
+    Home
   {{/link}}
-{{/foreach}}
-{{/get}}
+  {{#get
+    "pages"
+    filter="page:true+featured:true+tag:hash-de"
+    limit="all"
+    order="published_at asc"
+  }}
+    {{#foreach pages}}
+      {{#link class="navbar-item" href=url activeClass="nav-current"}}
+        {{title}}
+      {{/link}}
+    {{/foreach}}
+  {{/get}}
 {{/contentFor}}
-
 {{#contentFor "description"}}
-Aus Solidarität mit den Tieren, den Mitarbeitern und den Anwohnern!
+  Aus Solidarität mit den Tieren, den Mitarbeitern und den Anwohnern!
 {{/contentFor}}
-
 {{#contentFor "siteurl"}}
-{{@site.url}}/de/
+  {{@site.url}}/de/
 {{/contentFor}}
-
 {{#contentFor "langswitcher"}}
   {{#link href="/"}}
     <img
