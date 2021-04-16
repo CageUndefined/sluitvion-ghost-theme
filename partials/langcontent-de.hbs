@@ -1,0 +1,36 @@
+{{#contentFor "lang"}}{{de}}{{/contentFor}}
+
+{{#contentFor "langfilter"}}tag:hash-de{{/contentFor}}
+
+{{#contentFor "navigation"}}
+<a class="navbar-item{{#has slug=../de}} nav-current{{/has}}" href="{{@site.url}}/de/">Home</a>
+{{/contentFor}}
+
+{{#contentFor "description"}}
+Aus Solidarität mit den Tieren, den Mitarbeitern und den Anwohnern!
+{{/contentFor}}
+
+{{#contentFor "siteurl"}}
+{{@site.url}}/de/
+{{/contentFor}}
+
+{{#contentFor "langswitcher"}}
+  {{#link href="/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/netherlands-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/en/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/united-kingdom-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/de/"}}
+    <img
+      class="lang-switcher lang-selected"
+      src="{{asset "images/germany-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+{{/contentFor}}

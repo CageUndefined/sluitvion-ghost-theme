@@ -1,17 +1,35 @@
-{{#contentFor "lang"}}{{@site.lang}}{{/contentFor}}
-
+{{#contentFor "lang"}}
+  {{@site.lang}}
+{{/contentFor}}
+{{#contentFor "langfilter"}}
+  tag:-hash-en
+{{/contentFor}}
 {{#contentFor "navigation"}}
-{{navigation}}
+  {{navigation}}
 {{/contentFor}}
-
 {{#contentFor "description"}}
-{{@site.description}}
+  {{@site.description}}
 {{/contentFor}}
-
 {{#contentFor "siteurl"}}
-{{@site.url}}
+  {{@site.url}}
 {{/contentFor}}
-
 {{#contentFor "langswitcher"}}
-{{#link href="/en/"}}<img class="lang-switcher" src="{{asset 'images/flag-en.png'}}" />{{/link}}
+  {{#link href="/"}}
+    <img
+      class="lang-switcher lang-selected"
+      src="{{asset "images/netherlands-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/en/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/united-kingdom-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/de/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/germany-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
 {{/contentFor}}

@@ -1,17 +1,35 @@
-{{#contentFor "lang"}}{{en}}{{/contentFor}}
-
+{{#contentFor "lang"}}
+  {{en}}
+{{/contentFor}}
+{{#contentFor "langfilter"}}
+  tag:hash-en
+{{/contentFor}}
 {{#contentFor "navigation"}}
-{{navigation type="secondary"}}
+  {{navigation type="secondary"}}
 {{/contentFor}}
-
 {{#contentFor "description"}}
-Out of solidarity with the animals, the employees and the local residents!
+  Out of solidarity with the animals, the employees and the local residents!
 {{/contentFor}}
-
 {{#contentFor "siteurl"}}
-{{@site.url}}/en/
+  {{@site.url}}/en/
 {{/contentFor}}
-
 {{#contentFor "langswitcher"}}
-{{#link href="/"}}<img class="lang-switcher" src="{{asset 'images/flag-nl.png'}}" />{{/link}}
+  {{#link href="/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/netherlands-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/en/"}}
+    <img
+      class="lang-switcher {{^has slug="polskie"}}{{^has slug="blgharski"}}{{^has slug="romana"}}lang-selected{{/has}}{{/has}}{{/has}}"
+      src="{{asset "images/united-kingdom-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
+  {{#link href="/de/"}}
+    <img
+      class="lang-switcher"
+      src="{{asset "images/germany-flag-round-icon-256.png"}}"
+    />
+  {{/link}}
 {{/contentFor}}
